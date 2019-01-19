@@ -8,3 +8,4 @@ Comments about the programming differences (also annotated inside mastermind.sh)
 * Bash has no easy way to convert a string into an array or to use the "in" statement on strings. Comparing letters between words thus was done with slices.
 * Bash has no multidimensional array support so additional data was string-concatenated to be stored in a hack 2D-array.
 * Note that functions in Bash are severely limited when it comes to input/output variables.
+* Code ended up being more concise in Python.
