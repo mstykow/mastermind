@@ -1,6 +1,6 @@
 # Mastermind Game: Python vs Bash comparison
 
-This is a programming exercise. The goal was to make a command prompt version of the popular game "Mastermind", written both in Python and Shell.
+This is a programming exercise. The goal was to make a command prompt version of the popular game "Mastermind", written both in Python and Bash.
 
 Comments about the programming differences (also annotated inside mastermind.sh):
 * Bash has no built-in random sampler unlike Python so a hack was needed to generate the code word to be guessed.
