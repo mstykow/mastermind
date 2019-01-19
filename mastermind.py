@@ -16,13 +16,18 @@ print('Try to guess the correct 5-letter code out of A, B, C, D, E, F, G, H.')
 print('Each letter occurs only once. You have 8 attempts.')
 
 for i in range(8):
-    guesslist.append(list(input('Please enter a guess: ')))
+    guess = list(input('Please enter a guess: ').upper())
+    while len(guess) != 5 or len(set(guess)) != 5 or not ''.join(guess).isalpha():
+        print('Guess must consist of five unique letters.')
+        guess = list(input('Please try again: ').upper())
+    guesslist.append(guess)
     if guesslist[i] == code:
         print('You cracked the code!')
         break
     elif guesslist[i] != code and i == 7:
         print('You ran out of guesses.')
-        print('The correct answer was ' + ''.join(code))
+        print('The correct answer was ' + ''.join(code) + '.')
+        break
 
     match1=0
     for guess_letter in guesslist[i]:
@@ -37,6 +42,3 @@ for i in range(8):
     guesslist[i].extend([match1, match2])
 
     print_guesses(guesslist)
-
-# for guess in guesslist:
-#        print(''.join(guess) + ' contained: ' + str(match1) + ' exact: ' + str(match2))
