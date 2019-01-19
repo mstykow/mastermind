@@ -68,9 +68,7 @@ do
 
     echo -----GUESS--CONTAINED--EXACT-----
 
-    # Bash has no string formatting support so the following
-    # code section does not look as nice as the Python version.
-    # Also note that functions in Bash are severely limited when
+    # Note that functions in Bash are severely limited when
     # it comes to input/output variables. Writing the following
     # print section as a function in Bash wouldn't improve code.
     for index in ${!guesslist[@]}
